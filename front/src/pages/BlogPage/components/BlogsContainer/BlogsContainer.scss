@@ -1,0 +1,17 @@
+@use "../../../../assets/scss/utils/" as *;
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  .blogs-container-title {
+    @include main-title;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}

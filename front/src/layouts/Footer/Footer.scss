@@ -1,0 +1,117 @@
+@use "../../assets/scss/utils/" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    height: 25rem;
+    padding: 0 16rem;
+    background-color: $primary-tint-blue;
+    position: relative;
+
+    .footer-top-left {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+
+      .logo {
+        color: white;
+        font-size: 2.5rem;
+      }
+
+      .description {
+        color: $font-grey-color;
+        width: 70%;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+
+      .contact {
+        background-color: $primary-yellow;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        gap: 2rem;
+        padding-left: 3rem;
+        width: 30rem;
+        height: 6rem;
+        bottom: 0;
+
+        p {
+          font-size: 1rem;
+
+          span {
+            color: $font-grey-color-dark2;
+          }
+        }
+      }
+    }
+
+    .footer-top-right {
+      margin-bottom: 4rem;
+
+      .talk {
+        color: white;
+        font-weight: 500;
+        font-size: 4rem;
+      }
+
+      p {
+        color: $font-grey-color;
+        width: 80%;
+        font-size: 1.1rem;
+        font-weight: 200;
+      }
+
+      .social-media-icons {
+        display: flex;
+        margin: 1.5rem 0;
+        gap: 1.5rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(210deg)
+            brightness(102%) contrast(105%);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    height: 6rem;
+    padding: 0 16rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-bottom-left {
+      color: $primary-tint-blue;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .footer {
+    .footer-top {
+      padding: 0 10rem;
+
+      .footer-top-left {
+        .contact {
+          width: 28rem;
+        }
+      }
+    }
+
+    .footer-bottom {
+      padding: 0 10rem;
+    }
+  }
+}

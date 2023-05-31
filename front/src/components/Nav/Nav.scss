@@ -1,0 +1,39 @@
+@use "../../assets/scss/utils/" as *;
+
+.navs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    color: $font-grey-color;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.header {
+  li {
+    color: $font-grey-color;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.footerB {
+  li {
+    color: $font-grey-color-dark;
+
+    &:hover {
+      color: $font-grey-color;
+    }
+  }
+}

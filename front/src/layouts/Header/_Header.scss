@@ -1,0 +1,72 @@
+@use "../../assets/scss/utils/" as *;
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: $primary-tint-blue;
+  padding: 0 16rem;
+  height: 8rem;
+
+  .header-left {
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .menu {
+      display: none;
+    }
+
+    .contact-us {
+      border: 2px solid rgba(244, 246, 252, 0.2);
+      border-radius: 4rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+
+      p {
+        font-size: 1.4rem;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .main-header {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    padding: 0 4rem;
+    .header-right {
+      .navs {
+        display: none;
+      }
+
+      .menu {
+        display: initial;
+        width: 2rem;
+        height: 2rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(164deg)
+            brightness(106%) contrast(101%);
+        }
+      }
+    }
+  }
+}

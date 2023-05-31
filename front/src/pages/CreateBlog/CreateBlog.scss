@@ -1,0 +1,79 @@
+@use "../../assets/scss/utils/" as *;
+
+.create-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .create-blog-title {
+    @include main-title;
+  }
+
+  form {
+    width: 65%;
+    gap: 1rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input,
+    .custom-file-upload {
+      width: 80%;
+      height: 3rem;
+      border: 1px solid $primary-dark-blue;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+        padding-left: 1rem;
+      }
+
+      &::placeholder {
+        color: $primary-tint-blue;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+    input[type="date"] {
+      padding: 0 1rem;
+      color: $primary-tint-blue;
+      font-size: 1rem;
+    }
+
+    #myFileInput {
+      display: none;
+    }
+    .custom-file-upload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-yellow;
+      color: $primary-dark-blue;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .quill {
+      width: 80%;
+      color: $primary-tint-blue;
+    }
+
+    .btn-create {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20rem;
+      height: 3rem;
+      border-radius: 8px;
+      background-color: $primary-tint-blue;
+      cursor: pointer;
+
+      p {
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

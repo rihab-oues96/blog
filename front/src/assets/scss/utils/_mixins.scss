@@ -1,0 +1,9 @@
+@use "./_variables" as *;
+
+@mixin main-title {
+  color: $primary-dark-blue;
+  text-align: center;
+  margin: 5rem 0 1rem 0;
+  font-weight: 600;
+  font-size: 3rem;
+}
